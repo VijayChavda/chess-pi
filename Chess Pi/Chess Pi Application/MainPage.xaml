@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="Chess_Pi_Application.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Chess_Pi_Application"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sim="using:Device_Simulator"
+    xmlns:sv="using:Device_Status_Viewer"
+    xmlns:v="using:Chess_Pi_Application.View"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>-->
+
+        <!--<Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Border Margin="10" BorderThickness="5" BorderBrush="Red">
+                <sv:Board x:Name="SViewer" />
+            </Border>
+
+            --><!--<Button VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="UpdateStatusClicked">Update Status</Button>-->
+            <!--<sim:Simulator x:Name="Simulator" Grid.Row="1" Margin="20" StatusChanged="Simulator_StatusChanged" />--><!--
+        </Grid>-->
+
+        <v:GameView x:Name="GameView" Grid.Column="1" />
+    </Grid>
+</Page>

@@ -1,0 +1,165 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Chess_Pi_Application.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Class="Chess_Pi_Application.View.BoardView"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400" 
+    d:DataContext="{d:DesignInstance local:BoardView}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*" />
+            <ColumnDefinition Width="70*" />
+            <ColumnDefinition Width="15*" />
+        </Grid.ColumnDefinitions>
+
+        <GridView ItemsSource="{Binding Path=CapturedPiecesWhite}">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <ContentControl Content="{Binding}" />
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <Grid x:Name="BoardGrid" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <local:SquareView Grid.Row="0" Grid.Column="0" />
+            <local:SquareView Grid.Row="0" Grid.Column="1" />
+            <local:SquareView Grid.Row="0" Grid.Column="2" />
+            <local:SquareView Grid.Row="0" Grid.Column="3" />
+            <local:SquareView Grid.Row="0" Grid.Column="4" />
+            <local:SquareView Grid.Row="0" Grid.Column="5" />
+            <local:SquareView Grid.Row="0" Grid.Column="6" />
+            <local:SquareView Grid.Row="0" Grid.Column="7" />
+
+            <local:SquareView Grid.Row="1" Grid.Column="0" />
+            <local:SquareView Grid.Row="1" Grid.Column="1" />
+            <local:SquareView Grid.Row="1" Grid.Column="2" />
+            <local:SquareView Grid.Row="1" Grid.Column="3" />
+            <local:SquareView Grid.Row="1" Grid.Column="4" />
+            <local:SquareView Grid.Row="1" Grid.Column="5" />
+            <local:SquareView Grid.Row="1" Grid.Column="6" />
+            <local:SquareView Grid.Row="1" Grid.Column="7" />
+
+            <local:SquareView Grid.Row="2" Grid.Column="0" />
+            <local:SquareView Grid.Row="2" Grid.Column="1" />
+            <local:SquareView Grid.Row="2" Grid.Column="2" />
+            <local:SquareView Grid.Row="2" Grid.Column="3" />
+            <local:SquareView Grid.Row="2" Grid.Column="4" />
+            <local:SquareView Grid.Row="2" Grid.Column="5" />
+            <local:SquareView Grid.Row="2" Grid.Column="6" />
+            <local:SquareView Grid.Row="2" Grid.Column="7" />
+
+            <local:SquareView Grid.Row="3" Grid.Column="0" />
+            <local:SquareView Grid.Row="3" Grid.Column="1" />
+            <local:SquareView Grid.Row="3" Grid.Column="2" />
+            <local:SquareView Grid.Row="3" Grid.Column="3" />
+            <local:SquareView Grid.Row="3" Grid.Column="4" />
+            <local:SquareView Grid.Row="3" Grid.Column="5" />
+            <local:SquareView Grid.Row="3" Grid.Column="6" />
+            <local:SquareView Grid.Row="3" Grid.Column="7" />
+
+            <local:SquareView Grid.Row="4" Grid.Column="0" />
+            <local:SquareView Grid.Row="4" Grid.Column="1" />
+            <local:SquareView Grid.Row="4" Grid.Column="2" />
+            <local:SquareView Grid.Row="4" Grid.Column="3" />
+            <local:SquareView Grid.Row="4" Grid.Column="4" />
+            <local:SquareView Grid.Row="4" Grid.Column="5" />
+            <local:SquareView Grid.Row="4" Grid.Column="6" />
+            <local:SquareView Grid.Row="4" Grid.Column="7" />
+
+            <local:SquareView Grid.Row="5" Grid.Column="0" />
+            <local:SquareView Grid.Row="5" Grid.Column="1" />
+            <local:SquareView Grid.Row="5" Grid.Column="2" />
+            <local:SquareView Grid.Row="5" Grid.Column="3" />
+            <local:SquareView Grid.Row="5" Grid.Column="4" />
+            <local:SquareView Grid.Row="5" Grid.Column="5" />
+            <local:SquareView Grid.Row="5" Grid.Column="6" />
+            <local:SquareView Grid.Row="5" Grid.Column="7" />
+
+            <local:SquareView Grid.Row="6" Grid.Column="0" />
+            <local:SquareView Grid.Row="6" Grid.Column="1" />
+            <local:SquareView Grid.Row="6" Grid.Column="2" />
+            <local:SquareView Grid.Row="6" Grid.Column="3" />
+            <local:SquareView Grid.Row="6" Grid.Column="4" />
+            <local:SquareView Grid.Row="6" Grid.Column="5" />
+            <local:SquareView Grid.Row="6" Grid.Column="6" />
+            <local:SquareView Grid.Row="6" Grid.Column="7" />
+
+            <local:SquareView Grid.Row="7" Grid.Column="0" />
+            <local:SquareView Grid.Row="7" Grid.Column="1" />
+            <local:SquareView Grid.Row="7" Grid.Column="2" />
+            <local:SquareView Grid.Row="7" Grid.Column="3" />
+            <local:SquareView Grid.Row="7" Grid.Column="4" />
+            <local:SquareView Grid.Row="7" Grid.Column="5" />
+            <local:SquareView Grid.Row="7" Grid.Column="6" />
+            <local:SquareView Grid.Row="7" Grid.Column="7" />
+
+            <local:PieceView Grid.Row="0" Grid.Column="0" Player="Black" PieceType="Rook" Image="/Assets/Pieces/BR.png" />
+            <local:PieceView Grid.Row="0" Grid.Column="1" Player="Black" PieceType="Knight" Image="/Assets/Pieces/BN.png" />
+            <local:PieceView Grid.Row="0" Grid.Column="2" Player="Black" PieceType="Bishop" Image="/Assets/Pieces/BB.png" />
+            <local:PieceView Grid.Row="0" Grid.Column="3" Player="Black" PieceType="King" Image="/Assets/Pieces/BK.png" />
+            <local:PieceView Grid.Row="0" Grid.Column="4" Player="Black" PieceType="Queen" Image="/Assets/Pieces/BQ.png" />
+            <local:PieceView Grid.Row="0" Grid.Column="5" Player="Black" PieceType="Bishop" Image="/Assets/Pieces/BB.png" />
+            <local:PieceView Grid.Row="0" Grid.Column="6" Player="Black" PieceType="Knight" Image="/Assets/Pieces/BN.png" />
+            <local:PieceView Grid.Row="0" Grid.Column="7" Player="Black" PieceType="Rook" Image="/Assets/Pieces/BR.png" />
+            <local:PieceView Grid.Row="1" Grid.Column="0" Player="Black" PieceType="Pawn" Image="/Assets/Pieces/BP.png" />
+            <local:PieceView Grid.Row="1" Grid.Column="1" Player="Black" PieceType="Pawn" Image="/Assets/Pieces/BP.png" />
+            <local:PieceView Grid.Row="1" Grid.Column="2" Player="Black" PieceType="Pawn" Image="/Assets/Pieces/BP.png" />
+            <local:PieceView Grid.Row="1" Grid.Column="3" Player="Black" PieceType="Pawn" Image="/Assets/Pieces/BP.png" />
+            <local:PieceView Grid.Row="1" Grid.Column="4" Player="Black" PieceType="Pawn" Image="/Assets/Pieces/BP.png" />
+            <local:PieceView Grid.Row="1" Grid.Column="5" Player="Black" PieceType="Pawn" Image="/Assets/Pieces/BP.png" />
+            <local:PieceView Grid.Row="1" Grid.Column="6" Player="Black" PieceType="Pawn" Image="/Assets/Pieces/BP.png" />
+            <local:PieceView Grid.Row="1" Grid.Column="7" Player="Black" PieceType="Pawn" Image="/Assets/Pieces/BP.png" />
+
+            <local:PieceView Grid.Row="6" Grid.Column="0" Player="White" PieceType="Pawn" Image="/Assets/Pieces/WP.png" />
+            <local:PieceView Grid.Row="6" Grid.Column="1" Player="White" PieceType="Pawn" Image="/Assets/Pieces/WP.png" />
+            <local:PieceView Grid.Row="6" Grid.Column="2" Player="White" PieceType="Pawn" Image="/Assets/Pieces/WP.png" />
+            <local:PieceView Grid.Row="6" Grid.Column="3" Player="White" PieceType="Pawn" Image="/Assets/Pieces/WP.png" />
+            <local:PieceView Grid.Row="6" Grid.Column="4" Player="White" PieceType="Pawn" Image="/Assets/Pieces/WP.png" />
+            <local:PieceView Grid.Row="6" Grid.Column="5" Player="White" PieceType="Pawn" Image="/Assets/Pieces/WP.png" />
+            <local:PieceView Grid.Row="6" Grid.Column="6" Player="White" PieceType="Pawn" Image="/Assets/Pieces/WP.png" />
+            <local:PieceView Grid.Row="6" Grid.Column="7" Player="White" PieceType="Pawn" Image="/Assets/Pieces/WP.png" />
+            <local:PieceView Grid.Row="7" Grid.Column="0" Player="White" PieceType="Rook" Image="/Assets/Pieces/WR.png" />
+            <local:PieceView Grid.Row="7" Grid.Column="1" Player="White" PieceType="Knight" Image="/Assets/Pieces/WN.png" />
+            <local:PieceView Grid.Row="7" Grid.Column="2" Player="White" PieceType="Bishop" Image="/Assets/Pieces/WB.png" />
+            <local:PieceView Grid.Row="7" Grid.Column="3" Player="White" PieceType="King" Image="/Assets/Pieces/WK.png" />
+            <local:PieceView Grid.Row="7" Grid.Column="4" Player="White" PieceType="Queen" Image="/Assets/Pieces/WQ.png" />
+            <local:PieceView Grid.Row="7" Grid.Column="5" Player="White" PieceType="Bishop" Image="/Assets/Pieces/WB.png" />
+            <local:PieceView Grid.Row="7" Grid.Column="6" Player="White" PieceType="Knight" Image="/Assets/Pieces/WN.png" />
+            <local:PieceView Grid.Row="7" Grid.Column="7" Player="White" PieceType="Rook" Image="/Assets/Pieces/WR.png" />
+        </Grid>
+
+        <GridView Grid.Column="2" ItemsSource="{Binding Path=CapturedPiecesBlack}">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <ContentControl Content="{Binding}" />
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</UserControl>
